@@ -11,10 +11,10 @@ namespace Classes
     public class passerelle
     {
         static HttpClient client = new HttpClient();
-        public static async Task<List<Visiteur>> getUnDirecteurRegionnal(int id)
+        public static async Task<List<Visiteur>> getAllDirecteurRegionnal()
         {
             List<Visiteur> lesVisiteurs = new List<Visiteur>();
-            string url = "https://s5-5127.nuage-peda.fr/VitaTek/api.php?id=" + id;
+            string url = "https://s5-5127.nuage-peda.fr/VitaTek/api.php";
 
             using (HttpClient client = new HttpClient())
             {
