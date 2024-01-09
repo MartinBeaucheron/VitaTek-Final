@@ -1,4 +1,4 @@
-
+using Classes;
 namespace vita2
 {
     public partial class Form1 : Form
@@ -9,6 +9,11 @@ namespace vita2
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+            labelTest = Classes.passerelle.getAllDirecteurRegionnal();
+        }
+
+        private void labelTest_Click(object sender, EventArgs e)
         {
 
         }
