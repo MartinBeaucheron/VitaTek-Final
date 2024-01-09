@@ -11,7 +11,7 @@ namespace ClasseCritere
 		private string nomCritere;
 
 		//Méthodes getteurs :
-		public getnomCritere()
+		public string getnomCritere()
 		{
 			return this.nomCritere;
 		}
