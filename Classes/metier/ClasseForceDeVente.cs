@@ -2,34 +2,40 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Classes
 {
     public class ForceDeVente
     {
         //Définitions des variables :
-        private string nom;
-        //private int numero, nbEnfantACharge;
-        //private DateTime dateEmbauche, dateNaissance;
+        private string nom, laSituationFamilliale;
+        private int numero, nbEnfantACharge;
+        private DateTime dateEmbauche, dateNaissance;
+
+        [JsonPropertyName("situationfamilliale")]
+        public string LaSituationFamilliale { get => laSituationFamilliale; set => laSituationFamilliale = value; }
+        [JsonPropertyName("nom")]
+        public string Nom { get => nom; set => nom = value; }
+
 
         //Méthodes getteurs :
-<<<<<<< HEAD
+
 
         public string getNom()
         {
             return this.nom;
-=======
-        public string getNom()
-        {
-            return nom;
+
+
         }
+      
         public int getNumero()
         {
             return numero;
         }
         public string getLaSituationFamilliale()
         {
-            return laSituationFamilliale;
+            return this.laSituationFamilliale;
         }
         public int getNbEnfantACharge()
         {
@@ -42,7 +48,7 @@ namespace Classes
         public DateTime getDateNaissance()
         {
             return dateNaissance;
->>>>>>> 843735189915209a79ba47a7b52894c6135bf593
+
         }
         //Méthodes setteurs :
         public void setNom(string nom)
@@ -61,11 +67,11 @@ namespace Classes
         {
             this.nbEnfantACharge = nbEnfantACharge;
         }
-        public void setDateEmbauche(DateTime dateEmbauche)
+        void setDateEmbauche(DateTime dateEmbauche)
         {
             this.dateEmbauche = dateEmbauche;
         }
-        public void setDateNaissance(DateTime dateNaissance)
+        void setDateNaissance(DateTime dateNaissance)
         {
             this.dateNaissance = dateNaissance;
         }

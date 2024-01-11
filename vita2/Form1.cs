@@ -4,6 +4,7 @@ namespace vita2
 {
     public partial class Form1 : Form
     {
+
         private List<DirecteurRegional> lesDirecteurs;
         public Form1()
         {
@@ -12,11 +13,20 @@ namespace vita2
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            lesDirecteurs = await passerelle.getAllDirecteurRegionnal();
-            foreach (var ledirecteur in lesDirecteurs)
+            lesDirecteurs = await Passerelle.getAllDirecteurRegionnal();
+            try
             {
-                listBox1.Items.Add(ledirecteur.getNom());  
+                foreach (var ledirecteur in lesDirecteurs)
+                {
+                    listBox1.Items.Add(ledirecteur.getNom());
+                }
+
             }
+            catch (Exception ex)
+            {
+                labelTest.Text = ex.Message;
+            }
+           
 
         }
 

@@ -2,22 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 namespace Classes;
 
 public class DirecteurRegional : ForceDeVente
 
 {
     //Définitions des variables :
-    private string nomRole;
+    private int nomRole;
+
+    [JsonPropertyName("role")]
+    public int NomRole { get => nomRole; set => nomRole = value; }
 
     //Méthodes getteurs :
-    public string getnomRole()
+    public int getnomRole()
     {
         return nomRole;
     }
 
     //Méthodes setteurs :
-    void setnomRole(string nomRole)
+    void setnomRole(int nomRole)
     {
         this.nomRole = nomRole;
     }

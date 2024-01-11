@@ -8,13 +8,13 @@ using System.Text.Json;
 
 namespace Classes
 {
-    public class passerelle
+    public class Passerelle
     {
         static HttpClient client = new HttpClient();
         public static async Task<List<DirecteurRegional>> getAllDirecteurRegionnal()
         {
             List<DirecteurRegional> lesDirecteurs = new List<DirecteurRegional>();
-            string url = "https://s5-5127.nuage-peda.fr/VitaTek/api.php?role";
+            string url = "https://s5-5127.nuage-peda.fr/VitaTek/api.php";
 
             using (HttpClient client = new HttpClient())
             {
