@@ -11,7 +11,7 @@ namespace Classes
         private string nomSecteur;
 
         //Méthodes getteurs :
-        public getNomSecteur()
+        public string getNomSecteur()
         {
             return nomSecteur;
         }
@@ -19,12 +19,12 @@ namespace Classes
         //Méthodes setteurs :
         public void setNomSecteur(string nouveauNom)
         {
-            this.setNomSecteur = nouveauNom;
+            this.nomSecteur = nouveauNom;
         }
 
-        public void ToString()
+        public string tostring()
         {
-            Console.WriteLine("Le nom du Rôle est : " + nomSecteur);
+            return ("Le nom du Rôle est : " + nomSecteur);
         }
     }
 }

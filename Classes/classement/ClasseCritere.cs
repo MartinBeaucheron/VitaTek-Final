@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ClasseCritere
+namespace Classes
 {
 	public class Critere
 	{
@@ -17,14 +17,14 @@ namespace ClasseCritere
 		}
 
 		//Méthodes setteurs :
-		public setnomCritere(string nomCritere)
+		void setnomCritere(string nomCritere)
 		{
 			this.nomCritere = nomCritere;
 		}
 
-		//Méthode toString :
-		public String toString()
-		{
+        //Méthode toString :
+        public string tostring()
+        {
 			return "Le nom du critère est " + this.nomCritere;
 		}
 	}

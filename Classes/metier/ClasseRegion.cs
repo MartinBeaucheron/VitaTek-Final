@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.metier
+namespace Classes
 {
     public class Region
     {
@@ -11,7 +11,7 @@ namespace Classes.metier
         private string nomRegion;
 
         //Méthodes getteurs :
-        public getNomRegion()
+        public string getNomRegion()
         {
             return nomRegion;
         }
@@ -19,11 +19,12 @@ namespace Classes.metier
         //Méthodes setteurs :
         public void setNomRegion(string nouveauNom)
         {
-            nomRegion = nouveauNom;
+            this.nomRegion = nouveauNom;
         }
 
-        public void ToString()
+        public string tostring()
         {
-            Console.WriteLine("Le nom du Rôle est : " + nomRegion);
+            return("Le nom du Rôle est : " + nomRegion);
         }
     }
+}

@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ClasseValeurs
+namespace Classes
 {
     public class Valeurs
     {
         //Définitions des variables :
         private int nbPoints;
-        private string valeur;
+        private int valeur;
 
         //Méthodes getteurs :
-        public getnbPoints()
+        public int getnbPoints()
         {
             return this.nbPoints;
         }
-        public getvaleur()
+        public int getvaleur()
         {
             return this.valeur;
         }
 
         //Méthodes setteurs :
-        public setnbPoints(int nbPoints)
+        void setnbPoints(int nbPoints)
         {
             this.nbPoints = nbPoints;
         }
-        public setvaleur(int valeur)
+        void setvaleur(int valeur)
         {
             this.valeur = valeur;
         }
 
         //Méthode toString :
-        public string toString()
+        public string tostring()
         {
             return "La valeur du nombre de points est : " + this.nbPoints + "\nLa valeur est de : " + this.valeur;
         }

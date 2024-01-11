@@ -11,10 +11,10 @@ namespace Classes
     public class passerelle
     {
         static HttpClient client = new HttpClient();
-        public static async Task<List<Visiteur>> getAllDirecteurRegionnal()
+        public static async Task<List<DirecteurRegional>> getAllDirecteurRegionnal()
         {
-            List<Visiteur> lesVisiteurs = new List<Visiteur>();
-            string url = "https://s5-5127.nuage-peda.fr/VitaTek/api.php";
+            List<DirecteurRegional> lesDirecteurs = new List<DirecteurRegional>();
+            string url = "https://s5-5127.nuage-peda.fr/VitaTek/api.php?role";
 
             using (HttpClient client = new HttpClient())
             {
@@ -29,7 +29,7 @@ namespace Classes
                         throw new Exception();
 
                     string repAPIenJson = await response.Content.ReadAsStringAsync();
-                    lesVisiteurs = JsonSerializer.Deserialize<List<Visiteur>>(repAPIenJson);
+                    lesDirecteurs = JsonSerializer.Deserialize<List<DirecteurRegional>>(repAPIenJson);
                 }
                 catch (HttpRequestException e)
                 {
@@ -37,7 +37,7 @@ namespace Classes
                     Console.Write(e.Message);
                 }
 
-                return lesVisiteurs;
+                return lesDirecteurs;
             }
         }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ClasseTranche
+namespace Classes
 {
 	public class Tranche
 	{
@@ -13,34 +13,34 @@ namespace ClasseTranche
 		private double valeurMin;
 
 		//Méthodes getteurs :
-		public getnbPoints()
+		public int getnbPoints()
 		{
 			return this.nbPoints;
 		}
-		public getvaleurMaximum()
+		public double getvaleurMaximum()
 		{
 			return this.valeurMaximum;
 		}
-		public getvaleurMin()
+		public double getvaleurMin()
 		{
 			return this.valeurMin;
 		}
-		public setnbPoints(double nbPoints)
+		void setnbPoints(int nbPoints)
 		{
 			this.nbPoints = nbPoints;
 		}
-		public setvaleurMaximum(double valeurMaximum)
+		void setvaleurMaximum(double valeurMaximum)
 		{
 			this.valeurMaximum = valeurMaximum;
 		}
-		public setvaleurMin(set valeurMin)
+		void setvaleurMin(double valeurMin)
 		{
 			this.valeurMin = valeurMin;
 		}
 
-		//Méthode toString :
-		public string toString()
-		{
+        //Méthode toString :
+        public string tostring()
+        {
 			return "Le nombre de points est de :" + this.nbPoints + "\nLa valeur maximum est de : " + this.valeurMaximum + "\nLa valeur minimum est de : " + this.valeurMin;
 		}
 	}

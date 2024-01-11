@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-namespace Classes.metier;
+namespace Classes;
 
 public class DirecteurRegional : ForceDeVente
 
@@ -23,7 +23,7 @@ public class DirecteurRegional : ForceDeVente
     }
 
     //Méthodes toString :
-    public string toString()
+    public string tostring()
     {
         return "Le nom du rôle est :" + nomRole;
     }

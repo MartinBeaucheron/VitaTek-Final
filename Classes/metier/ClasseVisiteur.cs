@@ -17,6 +17,7 @@ namespace Classes
         private String nomRole;
 
         //Méthodes getteurs :
+
         public string getNomRôle()
         {
             return this.nomRole;
@@ -28,9 +29,9 @@ namespace Classes
             this.nomRole = nouveauNom;
         }
 
-        public void ToString()
+        public string tostring()
         {
-            Console.WriteLine("Le nom du Rôle est : " + this.nomRole);
+            return("Le nom du Rôle est : " + this.nomRole);
         }
     }
 }
