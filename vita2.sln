@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vita2", "vita2\vita2.csproj", "{2ED33F30-627D-4A4C-A771-B91A011CC7FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vita2", "vita2\vita2.csproj", "{2ED33F30-627D-4A4C-A771-B91A011CC7FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{CAE58E69-AE7A-406A-88D6-EA4D852554EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes", "Classes\Classes.csproj", "{CAE58E69-AE7A-406A-88D6-EA4D852554EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{2083B987-ACEE-43CE-BC19-26767C6EE0E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{A7DC7866-2762-4458-8F0B-B8B306B83608}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{CAE58E69-AE7A-406A-88D6-EA4D852554EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAE58E69-AE7A-406A-88D6-EA4D852554EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAE58E69-AE7A-406A-88D6-EA4D852554EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2083B987-ACEE-43CE-BC19-26767C6EE0E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2083B987-ACEE-43CE-BC19-26767C6EE0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2083B987-ACEE-43CE-BC19-26767C6EE0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2083B987-ACEE-43CE-BC19-26767C6EE0E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DC7866-2762-4458-8F0B-B8B306B83608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DC7866-2762-4458-8F0B-B8B306B83608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DC7866-2762-4458-8F0B-B8B306B83608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DC7866-2762-4458-8F0B-B8B306B83608}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

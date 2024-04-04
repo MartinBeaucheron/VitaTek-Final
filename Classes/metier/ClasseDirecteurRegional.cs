@@ -9,19 +9,27 @@ public class DirecteurRegional : ForceDeVente
 
 {
     //Définitions des variables :
-    private int nomRole;
-
+    public string nomRole;
     [JsonPropertyName("role")]
-    public int NomRole { get => nomRole; set => nomRole = value; }
+    public string NomRole { get => nomRole; set => nomRole = value; }
+   
+    public DirecteurRegional(int id, string nom, string prenom, int numero, DateTime dateEmbauche, DateTime dateNaiss, string situationfamilliale, int nbEnfantsACharge, string nomRole)
+        : base(id,nom, prenom, numero, dateEmbauche , dateNaiss, situationfamilliale, nbEnfantsACharge)
+    {
+        
+        this.nomRole = nomRole;
+    }
+
+
 
     //Méthodes getteurs :
-    public int getnomRole()
+    public string getnomRole()
     {
         return nomRole;
     }
 
     //Méthodes setteurs :
-    void setnomRole(int nomRole)
+    void setnomRole(string nomRole)
     {
         this.nomRole = nomRole;
     }

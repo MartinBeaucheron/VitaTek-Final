@@ -11,11 +11,11 @@ namespace Classes
     public class Passerelle
     {
         static HttpClient client = new HttpClient();
-        public static async Task<List<DirecteurRegional>> getAllDirecteurRegionnal()
+        public static async Task<List<ForceDeVente>> getAllDirecteurRegionnal()
         {
-            List<DirecteurRegional> lesDirecteurs = new List<DirecteurRegional>();
+            List<ForceDeVente> lesDirecteurs = new List<ForceDeVente>();
             string url = "https://s5-5127.nuage-peda.fr/VitaTek/api.php";
-
+            var options = new JsonSerializerOptions { IncludeFields = true };
             using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri(url);
@@ -29,7 +29,9 @@ namespace Classes
                         throw new Exception();
 
                     string repAPIenJson = await response.Content.ReadAsStringAsync();
-                    lesDirecteurs = JsonSerializer.Deserialize<List<DirecteurRegional>>(repAPIenJson);
+                    lesDirecteurs = JsonSerializer.Deserialize<List<ForceDeVente>>(repAPIenJson, options);
+                    
+
                 }
                 catch (HttpRequestException e)
                 {

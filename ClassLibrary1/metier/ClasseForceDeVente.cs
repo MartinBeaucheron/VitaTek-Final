@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Classes
+namespace ClassLibrary1
 {
     public class ForceDeVente
     {
-        public string nomfv, prenomfv, situationfamillialefv;
-        public int numerofv, nbEnfantsAChargefv, idfv;
-        public DateTime dateEmbauchefv, dateNaissfv;
+        private string nomfv, prenomfv, situationfamillialefv;
+        private int numerofv, nbEnfantsAChargefv, idfv;
+        private DateTime dateEmbauchefv, dateNaissfv;
 
         [JsonPropertyName("situationfamilliale")]
         public string SituationFamilliale { get => situationfamillialefv; set => situationfamillialefv = value; }
@@ -38,78 +38,78 @@ namespace Classes
 
         public ForceDeVente(int id, string nom, string prenom, int numero, DateTime dateEmbauche, DateTime dateNaiss, string situationfamilliale, int nbEnfantsACharge)
         {
-            this.idfv = id;
-            this.Nom = nom;
-            this.Prenom = prenom;
-            this.Numero = numero;
-            this.NbEnfantACharge = nbEnfantsACharge;
-            this.DateEmbauche = dateEmbauche;
-            this.DateNaissance = dateNaiss;
-            this.situationfamillialefv = situationfamilliale;
+            idfv = id;
+            Nom = nom;
+            Prenom = prenom;
+            Numero = numero;
+            NbEnfantACharge = nbEnfantsACharge;
+            DateEmbauche = dateEmbauche;
+            DateNaissance = dateNaiss;
+            situationfamillialefv = situationfamilliale;
         }
 
         public string getNom()
         {
-            return this.nomfv;
+            return nomfv;
 
 
         }
         public string getPreom()
         {
-            return this.prenomfv;
+            return prenomfv;
 
 
         }
 
         public int getNumero()
         {
-            return this.numerofv;
+            return numerofv;
         }
         public int getId()
         {
-            return this.idfv;
+            return idfv;
         }
         public string getLaSituationFamilliale()
         {
-            return this.situationfamillialefv;
+            return situationfamillialefv;
         }
         public int getNbEnfantACharge()
         {
-            return this.nbEnfantsAChargefv;
+            return nbEnfantsAChargefv;
         }
         public DateTime getDateEmbauche()
         {
-            return this.dateEmbauchefv;
+            return dateEmbauchefv;
         }
         public DateTime getDateNaissance()
         {
-            return this.dateNaissfv;
+            return dateNaissfv;
 
         }
         //Méthodes setteurs :
         public void setNom(string nom)
         {
-            this.nomfv = nom;
+            nomfv = nom;
         }
         public void setLaSituationFamilliale(string laSituationFamilliale)
         {
-            this.situationfamillialefv = laSituationFamilliale;
+            situationfamillialefv = laSituationFamilliale;
         }
         public void setNumero(int numero)
         {
-            this.numerofv = numero;
+            numerofv = numero;
         }
         public void setNbEnfantACharge(int nbEnfantACharge)
         {
-            this.nbEnfantsAChargefv = nbEnfantACharge;
+            nbEnfantsAChargefv = nbEnfantACharge;
         }
         void setDateEmbauche(DateTime dateEmbauche)
         {
-            this.dateEmbauchefv = dateEmbauche;
+            dateEmbauchefv = dateEmbauche;
         }
         void setDateNaissance(DateTime dateNaissance)
         {
-            this.dateNaissfv = dateNaissance;
+            dateNaissfv = dateNaissance;
         }
     }
 }

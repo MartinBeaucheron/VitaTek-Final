@@ -28,34 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ListViewItem listViewItem2 = new ListViewItem("");
             labelTest = new Label();
-            listBox1 = new ListBox();
+            listeEmployes = new ListView();
             SuspendLayout();
             // 
             // labelTest
             // 
             labelTest.AutoSize = true;
-            labelTest.Location = new Point(230, 119);
+            labelTest.Location = new Point(348, 22);
             labelTest.Name = "labelTest";
             labelTest.Size = new Size(50, 20);
             labelTest.TabIndex = 0;
             labelTest.Text = "label2";
             labelTest.Click += labelTest_Click;
             // 
-            // listBox1
+            // listeEmployes
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(400, 189);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(150, 104);
-            listBox1.TabIndex = 1;
+            listeEmployes.Items.AddRange(new ListViewItem[] { listViewItem2 });
+            listeEmployes.Location = new Point(33, 66);
+            listeEmployes.Name = "listeEmployes";
+            listeEmployes.Size = new Size(1219, 600);
+            listeEmployes.TabIndex = 1;
+            listeEmployes.UseCompatibleStateImageBehavior = false;
+            listeEmployes.SelectedIndexChanged += listeEmployes_SelectedIndexChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(listBox1);
+            ClientSize = new Size(1283, 733);
+            Controls.Add(listeEmployes);
             Controls.Add(labelTest);
             Name = "Form1";
             Text = "Form1";
@@ -68,6 +71,6 @@
 
         private Label label1;
         private Label labelTest;
-        private ListBox listBox1;
+        private ListView listeEmployes;
     }
 }
