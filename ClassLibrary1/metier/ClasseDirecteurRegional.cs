@@ -34,7 +34,7 @@ namespace ClassLibrary1
             this.role = role;
         }
 
-
+        public DirecteurRegional() { }
 
 
 

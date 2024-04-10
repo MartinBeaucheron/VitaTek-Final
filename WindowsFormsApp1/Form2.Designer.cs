@@ -40,6 +40,8 @@
             this.actionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSuppForce = new System.Windows.Forms.Button();
+            this.txtIDASupp = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,19 +158,37 @@
             // 
             // btnSuppForce
             // 
-            this.btnSuppForce.Location = new System.Drawing.Point(559, 680);
+            this.btnSuppForce.Location = new System.Drawing.Point(730, 682);
             this.btnSuppForce.Name = "btnSuppForce";
             this.btnSuppForce.Size = new System.Drawing.Size(216, 65);
             this.btnSuppForce.TabIndex = 9;
             this.btnSuppForce.Text = "Supprimer Force de vente";
             this.btnSuppForce.UseVisualStyleBackColor = true;
-            this.btnSuppForce.Click += new System.EventHandler(this.button1_Click);
+            this.btnSuppForce.Click += new System.EventHandler(this.btnSuppForceDeVente_Click);
+            // 
+            // txtIDASupp
+            // 
+            this.txtIDASupp.Location = new System.Drawing.Point(542, 703);
+            this.txtIDASupp.Name = "txtIDASupp";
+            this.txtIDASupp.Size = new System.Drawing.Size(100, 22);
+            this.txtIDASupp.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(329, 706);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(181, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Id que vous voulez supprimer";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 812);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtIDASupp);
             this.Controls.Add(this.btnSuppForce);
             this.Controls.Add(this.cbPoints);
             this.Controls.Add(this.label3);
@@ -204,5 +224,7 @@
         private System.Windows.Forms.ToolStripMenuItem actionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.Button btnSuppForce;
+        private System.Windows.Forms.TextBox txtIDASupp;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -46,6 +46,10 @@ namespace ClassLibrary1
             this.situationfamilliale = situationfamilliale; 
             this.nbEnfants = nbEnfants;
         }
+        public ForceDeVente2()
+        {
+
+        }
 
         public int getId()
         {

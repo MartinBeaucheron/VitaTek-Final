@@ -137,14 +137,13 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void btnSuppForceDeVente_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Voulez vous vraiment supprimer cette force de vente?","", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Voulez vous vraiment supprimer cette force de vente?","",MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes) 
             {
-                //List directeurASupprimer = listeEmployes.SelectedItems;
-                //Console.WriteLine(directeurASupprimer.ToString());
-                //Passerelle.deleteForceDeVente();
+                int id = int.Parse(txtIDASupp.Text);
+                await Passerelle.deleteForceDeVente(id);
             }
         }
     }

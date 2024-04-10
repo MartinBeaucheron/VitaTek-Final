@@ -175,19 +175,18 @@ namespace ClassLibrary1
             }
 
         }
-        public static async Task deleteForceDeVente(ForceDeVente forceDeVente)
+        public static async Task deleteForceDeVente(int id)
         {
-            string url = "http://127.0.0.1/bingosurtoi/wsbingosurtoi.php";
+            string url = "https://s5-5127.nuage-peda.fr/VitaTek/api.php";
             string repAPIenJson;
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(url);
-            client.DefaultRequestHeaders.Accept.Add(new
-                MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
             {
                 List<KeyValuePair<string, string>> postData = new List<KeyValuePair<string, string>>();
-                postData.Add(new KeyValuePair<string, string>("numero", forceDeVente.getNumero().ToString()));
-                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Delete, client.BaseAddress);
+                postData.Add(new KeyValuePair<string, string>("id", id.ToString()));
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Delete, url);
                 request.Content = new FormUrlEncodedContent(postData);
                 HttpResponseMessage response = await client.SendAsync(request);
             }

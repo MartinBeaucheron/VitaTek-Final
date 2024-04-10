@@ -47,6 +47,10 @@ namespace ClassLibrary1
             DateNaissance = dateNaiss;
             situationfamillialefv = situationfamilliale;
         }
+        public ForceDeVente() 
+        {
+            
+        }
 
         public string getNom()
         {
