@@ -77,7 +77,8 @@ namespace WindowsFormsApp1
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormAjouter formAjouter = new FormAjouter();
+            formAjouter.Show();
         }
 
         private async void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
